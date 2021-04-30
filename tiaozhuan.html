@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,maximum-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <script src="./clipboard.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jutils-src"></script>
+  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mescroll.js@1.4.1/mescroll.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/mescroll.js@1.4.1/mescroll.min.js" charset="utf-8"></script>
+<style>
+a{text-decoration:none}
+</style>
+  <style>
+      #xxx{
+      color: lightgrey; cursor: not-allowed;margin: 50px 0 20px;
+    width: calc(100% - 20px);
+    align-items: center;
+    background-color: #dc4433;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 1px 1px 2px #dc4433;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    justify-content: center;
+    outline: none;width: 300px;  
+        
+        }	/*固定高度*/
+	.mescroll{
+		position: fixed;
+		top: 44px;
+		bottom: 0;
+		height: auto;/*如设置bottom:50px,则需height:auto才能生效*/
+	}
+      </style>
+</head>
+<link rel="stylesheet" href="css/index.css" />
+
+
+<body >
+  <div id="root">
+    <div class="App" align="middle">
+      <div class="header">
+        <div class="innerDiv">
+          <img src="img/logo.9697fadc.png" alt="logo" width="100%" class="logo" />
+          <div class="tabDiv" algin="middle">
+            <div class="tabs" algin="middle">
+              <a href="index.html">
+                <p class="clickableButton">首页</p>
+              </a><a href="index.html">
+                <p class="selectedTab clickableButton">矿池</p>
+              </a><a href="tiaozhuan.html">
+                <p class="clickableButton">关于 PIZ</p>
+              </a><a href="img/distributionChartzh_CN.935133f1.png" target="_blank" rel="noopener noreferrer">
+                <p>代币分配</p>
+              </a>
+            </div>
+          </div>
+          <div class="audit clickableButton" align="right">
+            <a href="img/audit.d95f29fc.pdf" target="_blank" rel="noopener noreferrer">审计报告</a>
+          </div>
+          <div class="walletSection clickableButton" align="right">
+            <img
+              src="img/piz.png"
+              alt="logo" width="15px" />&nbsp;<span id="ht_piz_count">0</span> &nbsp;|&nbsp;&nbsp;<a  id="link_wallet">连接钱包</a>
+          </div>
+          <div class="changeLang" align="right">
+            <span class="clickableButton">EN</span> /
+            <span class="clickableButton">CN</span>
+          </div>
+        </div>
+      </div>
+      <div class="bank" align="middle">
+        <div class="greating">
+          <img
+            src="img/deng.png"
+            alt="png" width="180px" />
+          <h1>赚取PIZ通过质押HT-PIZ-LP</h1>
+        
+        </div>
+        <div class="bankList">
+          
+          <div class="bankCard" align="middle">
+            <img src="img/piz.png" alt="png" width="50px" />
+<!--              <h2 style="margin-bottom:0px !important"><input placeholder="请输入质押的数目" type="num" name="t1x" id="t1x" style=" text-align:center"></h2> -->
+            <p style="margin-bottom:30px">你的收益</p>
+            <p id="my_piz" style="margin-bottom:30px">PIZ:0.0</p>
+
+            
+            
+            
+              <div class="select confirmb" style="color:#fff;background: #dc4433;" >授权 PIZ</div>
+            
+
+          </div>
+          
+          <div class="bankCard" align="middle">
+            <img src="img/ht.png" alt="png" width="50px" />
+           
+           <h2 style="margin-bottom:0px !important"><input placeholder="请输入质押的数目" type="num" name="t1x" id="t1x" style=" text-align:center"></h2>
+            <p style="margin-bottom:30px" id="my_in_usdttoken">已质押</p>
+            
+              <div class="select confirma" style="color:#fff;background: #dc4433;">质押 PIZ</div>
+              <div class="select confirmc" style="color:#fff;background: #dc4433;">收获 </div>
+              <div class="select confirmd" style="color:#fff;background: #dc4433;">收获 &amp; 解押</div>
+            
+            
+          </div>
+           <div class="bankCard" align="middle">  
+ 
+         
+
+               
+          <div class="select"  style="color:#fff;background: #dc4433;" id="btncopy">复制推广链接</div>
+          <p id="copyUrl" style="font-size:10px" ></p>
+                    </div>
+        </div>
+      </div>
+      <div class="footer" align="middle">
+        <a href="https://ht.mdex.com/#/swap?inputCurrency=0xa71edc38d189767582c38a3145b5873052c3e47a&outputCurrency=0x96c2ca73063edfbbfd98532d27c1ca023c6061a9" target="_blank" rel="noopener noreferrer">购买 PIZ</a><a href="" target="_blank"
+          rel="noopener noreferrer">Telegram</a><a href="" target="_blank" rel="noopener noreferrer">Twitter</a><a
+          href="" target="_blank" rel="noopener noreferrer">Medium</a><a href="" target="_blank"
+          rel="noopener noreferrer">Github</a>
+      </div>
+    </div>
+  </div>
+ 	   	<div id="mescroll" class="mescroll"> 
+	   		<div> 
+		   
+	    		</div>
+	    	</div>     
+    <script src="js/ok.js" defer></script>
+
+</body>
+
+</html>
